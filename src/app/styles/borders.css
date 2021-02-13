@@ -13,3 +13,7 @@
 .border-none {
     border: none;
 }
+
+.border-thin {
+    border: thin solid var(--color-primary);
+}
