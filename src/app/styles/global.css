@@ -85,6 +85,10 @@ input, textarea, select {
     color: var(--color-text-black);
 }
 
+input:checked{
+    background-color: var(--color-primary);
+}
+
 a {
     cursor: pointer;
     color: var(--color-success);
