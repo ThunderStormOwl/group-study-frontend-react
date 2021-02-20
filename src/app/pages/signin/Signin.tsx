@@ -18,8 +18,8 @@ export const Signin: React.FC = () => {
     }, [email, password]);
     
     return(
-        <div className="signin-base flex-content-center flex-items-center background">
-            <div className="padding-g shadow-m border-red flex-column flex-items-center background-paper">
+        <div className="signin-base flex-content-center flex-items-center">
+            <div className="padding-g shadow-m border-red border-radius-soft flex-column flex-items-center background-paper">
                 <h2>Log in</h2>
                 <div className="margin-top-m">
                     <form 
@@ -28,7 +28,7 @@ export const Signin: React.FC = () => {
                     >
 
                             <input 
-                                className="background padding-m font-size-m" 
+                                className="padding-m font-size-m" 
                                 placeholder="Email"
                                 type="email"
                                 required
@@ -38,7 +38,7 @@ export const Signin: React.FC = () => {
                         
                             <input
                                 minLength={2}
-                                className="background padding-m font-size-m margin-top-s" 
+                                className="padding-m font-size-m margin-top-s" 
                                 placeholder="Senha"
                                 type="password"
                                 value={password}
