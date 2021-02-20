@@ -39,7 +39,7 @@ export const Signin: React.FC = () => {
                             <input
                                 minLength={2}
                                 className="padding-m font-size-m margin-top-s" 
-                                placeholder="Senha"
+                                placeholder="Password"
                                 type="password"
                                 value={password}
                                 required
@@ -53,16 +53,16 @@ export const Signin: React.FC = () => {
                                     checked={keepConnected}
                                     onChange={(e) => setKeepConnected(!keepConnected)}
                                 />
-                                Manter conectado
+                                Stay logged in
                             </label>
                             
 
-                            <Button>entrar</Button>
+                            <Button>Log In</Button>
                     </form>
                     
                 </div>
                 <Link to="/signup" className="font-size-m margin-top-m font-weight-g">
-                    Cadastrar-se
+                    Sign Up
                 </Link>
             </div>
 
