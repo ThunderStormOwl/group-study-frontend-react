@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface FormProps extends React.FormHTMLAttributes<HTMLFormElement>{
-    formClass: string;
+    formClass?: string;
 }
 
 export const Form: React.FC<FormProps> = (props) => {
@@ -9,7 +9,7 @@ export const Form: React.FC<FormProps> = (props) => {
     return(
         <form
             {...props}
-            className={props.formClass}
+            className={props.formClass? props.formClass : "default"}
         />
     );
 

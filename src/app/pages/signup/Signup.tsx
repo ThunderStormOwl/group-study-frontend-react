@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeContext } from '../../shared/contexts/theme';
 import { useTheme } from '../../shared/hooks/useTheme';
-import Form from '../../shared/components/Form';
+import { Form } from '../../shared/components/Form';
 
 export const Signup: React.FC = () => {
 
@@ -9,7 +9,9 @@ export const Signup: React.FC = () => {
 
     return(
         <div className="form-wrapper">
-            
+            <Form>
+
+            </Form>
         </div>
     );
 
