@@ -71,6 +71,10 @@ div, nav, form {
     background-color: transparent;
 }
 
+label, h1, h2, h3, h4, h5, h6, span, a{
+    color: var(--color-text);
+}
+
 body, input, button, textarea {
     font: var(--font-weight-m) var(--font-size-g) var(--font-family);
 }
