@@ -4,3 +4,9 @@
     align-items: center;
     justify-content: center;
 }
+
+.dark-mode-container{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

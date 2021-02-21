@@ -7,34 +7,47 @@ import './Signup.css'
 
 export const Signup: React.FC = () => {
 
-    const {isDark} = useTheme();
+    const {isDark, toggleDarkMode} = useTheme();
 
     return(
         <div className="page-wrapper">
             <Form >
 
-                <Input 
+                <Input
+                    label="Full name:"
                     placeholder="Phil Becker"
-                    label="Full name"
                 />
                 <Input 
-                    placeholder="Phil Becker"
-                    label="Full name"
+                    label="Email:"
+                    placeholder="philb123@email.com"
+                />
+                <Input
+                    label="Username:"
+                    placeholder="phil.is.Cool_123"
                 />
                 <Input 
-                    placeholder="Phil Becker"
-                    label="Full name"
+                    label="Password:"
+                    placeholder="123imgay;)"
                 />
                 <Input 
-                    placeholder="Phil Becker"
-                    label="Full name"
-                />
-                <Input 
-                    placeholder="Phil Becker"
-                    label="Full name"
+                    label="Phone number:"
+                    placeholder="555-12345"
                 />
 
             </Form>
+            <div className="dark-mode-container">
+
+                <label className="font-size-m padding-g display-flex flex-items-center">
+                        <input
+                            className="margin-right-s"
+                            type="checkbox"
+                            checked={isDark}
+                            onChange={() => toggleDarkMode()}
+                        />
+                        Dark mode
+                </label>
+
+            </div>
         </div>
     );
 
