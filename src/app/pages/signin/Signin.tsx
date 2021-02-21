@@ -2,11 +2,9 @@ import React, { useCallback, useState } from 'react';
 import './Signin.css';
 import {Button} from '../../shared/components/Button';
 import {Link} from 'react-router-dom';
-import {useTheme} from '../../shared/hooks/useTheme'
+import{DarkModeCheckbox} from '../../shared/components/DarkModeCheckbox'
 
 export const Signin: React.FC = () => {
-
-    const {isDark, toggleDarkMode} = useTheme();
 
     const[email, setEmail] = useState('');
     const[password, setPassword] = useState('');
@@ -66,19 +64,8 @@ export const Signin: React.FC = () => {
                 </Link>
             </div>
 
-            <div className="dark-mode-container">
+            <DarkModeCheckbox/>
 
-                <label className="font-size-m padding-g display-flex flex-items-center">
-                        <input
-                            className="margin-right-s"
-                            type="checkbox"
-                            checked={isDark}
-                            onChange={() => toggleDarkMode()}
-                        />
-                        Dark mode
-                </label>
-
-            </div>
         </div>
     );
 
