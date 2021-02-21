@@ -111,6 +111,10 @@ input{
     background-color: var(--color-input-background);
 }
 
+input::placeholder{
+    color: var(--color-placeholder);
+}
+
 textarea, select {
 
     background-color: var(--color-background-bars);

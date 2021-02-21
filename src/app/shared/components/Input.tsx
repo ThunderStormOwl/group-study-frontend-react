@@ -12,7 +12,6 @@ export const Input: React.FC<InputProps> = ({label, ...props}) => {
             {label?<label>{label}</label>:null}
             <input
                 {...props}
-                className="input-text"
             />
         </div>
     );

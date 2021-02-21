@@ -21,7 +21,8 @@ export const ThemeProvider: React.FC = ({ children }) => {
             document.documentElement.style.setProperty('--color-border', '#fafafa')
             document.documentElement.style.setProperty('--color-text', '#fafafa')
             document.documentElement.style.setProperty('--color-primary', '#ec1414')
-            document.documentElement.style.setProperty('--color-input-background', '6d6c6c')
+            document.documentElement.style.setProperty('--color-input-background', '#ec1414')
+            document.documentElement.style.setProperty('--color-placeholder', '#ffffff')
 
         }
         else{
@@ -31,7 +32,8 @@ export const ThemeProvider: React.FC = ({ children }) => {
             document.documentElement.style.setProperty('--color-border', '#afafaf')
             document.documentElement.style.setProperty('--color-text', '#000000')
             document.documentElement.style.setProperty('--color-primary', '#fb1b1b')
-            document.documentElement.style.setProperty('--color-input-background', 'a8a8a8')
+            document.documentElement.style.setProperty('--color-input-background', '#e4e4e4')
+            document.documentElement.style.setProperty('--color-placeholder', '#000000')
 
 
         }

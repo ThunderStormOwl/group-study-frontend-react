@@ -17,6 +17,22 @@ export const Signup: React.FC = () => {
                     placeholder="Phil Becker"
                     label="Full name"
                 />
+                <Input 
+                    placeholder="Phil Becker"
+                    label="Full name"
+                />
+                <Input 
+                    placeholder="Phil Becker"
+                    label="Full name"
+                />
+                <Input 
+                    placeholder="Phil Becker"
+                    label="Full name"
+                />
+                <Input 
+                    placeholder="Phil Becker"
+                    label="Full name"
+                />
 
             </Form>
         </div>
