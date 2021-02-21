@@ -12,27 +12,39 @@ export const Signup: React.FC = () => {
     return(
         <div className="page-wrapper">
             <Form >
+                
+                <div className="form-section">
+                    <Input
+                        label="Full name:"
+                        placeholder="Phil Becker"
+                    />
+                    <Input 
+                        label="Email:"
+                        placeholder="philb123@email.com"
+                    />
+                </div>
 
-                <Input
-                    label="Full name:"
-                    placeholder="Phil Becker"
-                />
-                <Input 
-                    label="Email:"
-                    placeholder="philb123@email.com"
-                />
-                <Input
-                    label="Username:"
-                    placeholder="phil.is.Cool_123"
-                />
-                <Input 
-                    label="Password:"
-                    placeholder="123imgay;)"
-                />
-                <Input 
-                    label="Phone number:"
-                    placeholder="555-12345"
-                />
+                <div className="form-section">
+                    <Input
+                        label="Username:"
+                        placeholder="phil.is.Cool_123"
+                    />
+                    <Input 
+                        label="Password:"
+                        placeholder="123imgay;)"
+                    />
+                </div>
+
+                <div className="form-section">
+                    <Input 
+                        label="Phone number:"
+                        placeholder="555-12345"
+                    />
+                    <Input 
+                        label="Address:"
+                        placeholder="123 whatever street"
+                    />
+                </div>
 
             </Form>
             <div className="dark-mode-container">
