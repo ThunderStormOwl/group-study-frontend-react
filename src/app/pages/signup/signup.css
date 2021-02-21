@@ -1,4 +1,6 @@
-.form-wrapper{
-    height: auto;
-    width: auto;
+.page-wrapper{
+    height: inherit;
+    width: inherit;
+    align-items: center;
+    justify-content: center;
 }

@@ -1,0 +1,12 @@
+label {
+    margin-bottom: var(--size-s);
+    margin-top: var(--size-g);
+}
+
+.input-text{
+    background-color: white;
+}
+
+.input-wrapper{
+    background-color: rgb(180, 111, 20);
+}

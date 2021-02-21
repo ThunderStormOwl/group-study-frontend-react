@@ -107,8 +107,18 @@ input[type=checkbox]:checked::after {
     margin-left: calc(var(--size-g)/3);
 }
 
-input, textarea, select {
+input{
+    background-color: var(--color-input-background);
+}
+
+textarea, select {
+
     background-color: var(--color-background-bars);
+
+}
+
+input, textarea, select {
+    
     border-radius: var(--size-xs);
     border: thin solid var(--color-border);
     padding: var(--padding-s);
