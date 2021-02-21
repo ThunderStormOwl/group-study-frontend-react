@@ -1,8 +1,9 @@
 import React from 'react';
 import { Form } from '../../shared/components/Form';
-import {Input} from'../../shared/components/Input';
-import './Signup.css'
-import{DarkModeCheckbox} from '../../shared/components/DarkModeCheckbox'
+import { Input } from'../../shared/components/Input';
+import './Signup.css';
+import { DarkModeCheckbox } from '../../shared/components/DarkModeCheckbox';
+import { Button } from '../../shared/components/Button';
 
 export const Signup: React.FC = () => {
     
@@ -19,6 +20,7 @@ export const Signup: React.FC = () => {
                     <Input 
                         label="Email:"
                         placeholder="philb123@email.com"
+                        type="email"
                     />
                 </div>
 
@@ -30,6 +32,7 @@ export const Signup: React.FC = () => {
                     <Input 
                         label="Password:"
                         placeholder="123imgay;)"
+                        type="password"
                     />
                 </div>
 
@@ -43,6 +46,8 @@ export const Signup: React.FC = () => {
                         placeholder="123 whatever street"
                     />
                 </div>
+
+                <Button/>
 
             </Form>
             
