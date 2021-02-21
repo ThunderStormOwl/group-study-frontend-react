@@ -23,7 +23,8 @@ export const ThemeProvider: React.FC = ({ children }) => {
             document.documentElement.style.setProperty('--color-primary', '#ec1414')
             document.documentElement.style.setProperty('--color-input-background', '#ec1414')
             document.documentElement.style.setProperty('--color-placeholder', '#ffffff7e')
-
+            document.documentElement.style.setProperty('--button-text-color', '#ec1414')
+            
         }
         else{
 
@@ -34,7 +35,7 @@ export const ThemeProvider: React.FC = ({ children }) => {
             document.documentElement.style.setProperty('--color-primary', '#fb1b1b')
             document.documentElement.style.setProperty('--color-input-background', '#e4e4e4')
             document.documentElement.style.setProperty('--color-placeholder', '#0000007e')
-
+            document.documentElement.style.setProperty('--button-text-color', '#000000')
 
         }
     }, [isDark]);

@@ -13,6 +13,8 @@
     --color-text: #C4C4C4;
     --color-input-background: #0000007e;
     --color-placeholder: black;
+    /*Mine*/
+    --button-text-color: white;
 }
 
 .background {

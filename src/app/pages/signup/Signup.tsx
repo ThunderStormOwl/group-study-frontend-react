@@ -12,7 +12,7 @@ export const Signup: React.FC = () => {
         <div className="page-wrapper">
             <Form >
                 
-                <div className="form-section">
+                <div>
                     <Input
                         label="Full name:"
                         placeholder="Phil Becker"
@@ -24,7 +24,7 @@ export const Signup: React.FC = () => {
                     />
                 </div>
 
-                <div className="form-section">
+                <div>
                     <Input
                         label="Username:"
                         placeholder="phil.is.Cool_123"
@@ -36,7 +36,7 @@ export const Signup: React.FC = () => {
                     />
                 </div>
 
-                <div className="form-section">
+                <div>
                     <Input 
                         label="Phone number:"
                         placeholder="555-12345"
@@ -46,8 +46,24 @@ export const Signup: React.FC = () => {
                         placeholder="123 whatever street"
                     />
                 </div>
+                
+                <div className="buttons-wrapper padding-top-g padding-bottom-s">
+                    
+                    <div className="back-button-wrapper">
+                        <Button 
+                            className="form-button"
+                            variant='outlined'
+                        >
+                            Back to log in
+                        </Button>
+                    </div>
 
-                <Button/>
+                    <div className="submit-button-wrapper">
+                        <Button className="form-button test">
+                            Sign me up!
+                        </Button>
+                    </div>
+                </div>
 
             </Form>
             

@@ -5,7 +5,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>{
     label?: string;
 }
 
-export const Input: React.FC<InputProps> = ({label, inputType, ...props}) => {
+export const Input: React.FC<InputProps> = ({label, ...props}) => {
 
     return(
         <div className="input-wrapper flex-column padding-g">

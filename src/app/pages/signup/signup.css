@@ -4,9 +4,15 @@
     align-items: center;
     justify-content: center;
 }
-
-.dark-mode-container{
-    position: absolute;
-    bottom: 0;
-    right: 0;
+.submit-button-wapper{
+    position: ;
 }
+
+.back-button-wrapper{
+
+}
+
+.buttons-wrapper{
+    width: 100%;
+}
+
