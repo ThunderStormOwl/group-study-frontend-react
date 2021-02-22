@@ -18,7 +18,7 @@ export const Signup: React.FC = () => {
 
     const [formData, updateFormData] = React.useState(formDataTemplate);
 
-    const handleFormChange = ((e) => {
+    const handleFormChange = (e: React.ChangeEvent<any>) => {
 
         updateFormData({
             ...formData,
@@ -27,9 +27,14 @@ export const Signup: React.FC = () => {
 
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.ChangeEvent<any>) => {
         e.preventDefault();
-        console.log(formData);
+        alert(  "Name: " + formData.name +
+              "\nEmail: " + formData.email +
+              "\nUsername: " + formData.username +
+              "\nPassword: " + formData.password +
+              "\nPhone: " + formData.phone +
+              "\nAddress: " + formData.address);
         //send to back end here
     };
 
@@ -39,11 +44,13 @@ export const Signup: React.FC = () => {
                 
                 <div>
                     <Input
+                        name="name"
                         label="Full name:"
                         placeholder="Phil Becker"
                         onChange={handleFormChange}
                     />
-                    <Input 
+                    <Input
+                        name="email"
                         label="Email:"
                         placeholder="philb123@email.com"
                         type="email"
@@ -53,11 +60,13 @@ export const Signup: React.FC = () => {
 
                 <div>
                     <Input
+                        name="username"
                         label="Username:"
                         placeholder="phil.is.Cool_123"
                         onChange={handleFormChange}
                     />
-                    <Input 
+                    <Input
+                        name="password"
                         label="Password:"
                         placeholder="123imgay;)"
                         type="password"
@@ -66,12 +75,14 @@ export const Signup: React.FC = () => {
                 </div>
 
                 <div>
-                    <Input 
+                    <Input
+                        name="phone"
                         label="Phone number:"
                         placeholder="555-12345"
                         onChange={handleFormChange}
                     />
-                    <Input 
+                    <Input
+                        name="address"
                         label="Address:"
                         placeholder="123 whatever street"
                         onChange={handleFormChange}
