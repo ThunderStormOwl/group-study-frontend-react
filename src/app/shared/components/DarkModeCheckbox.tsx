@@ -1,6 +1,7 @@
 import React from 'react';
-import {useTheme} from '../../shared/hooks/useTheme'
-import './styles/DarkModeCheckbox.css'
+import {useTheme} from '../../shared/hooks/useTheme';
+import './styles/DarkModeCheckbox.css';
+
 
 interface DMCProps{
     style?:{};

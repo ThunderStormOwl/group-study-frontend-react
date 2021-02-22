@@ -6,7 +6,8 @@ import { DarkModeCheckbox } from '../../shared/components/DarkModeCheckbox';
 import { Button } from '../../shared/components/Button';
 import Maria from '../../shared/assets/images/Maria.jpg';
 import Eclipse from '../../shared/assets/images/eclipse.jpg';
-import {useTheme} from '../../shared/hooks/useTheme'
+import {useTheme} from '../../shared/hooks/useTheme';
+import {Route} from 'react-router-dom';
 
 const formDataTemplate = {
     name:"",
@@ -102,12 +103,15 @@ export const Signup: React.FC = () => {
                 <div className="buttons-wrapper padding-top-g padding-bottom-s">
                     
                     <div className="back-button-wrapper">
-                        <Button 
+                        <Route render={({history}) => (
+                            <Button 
                             className="form-button"
                             variant='outlined'
-                        >
-                            Back to log in
-                        </Button>
+                            onClick={() => history.push('/signin')}
+                            >
+                                Back to log in
+                            </Button>
+                        )}/>
                     </div>
 
                     <div className="submit-button-wrapper">
