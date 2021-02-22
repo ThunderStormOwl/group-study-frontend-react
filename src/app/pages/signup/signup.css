@@ -4,12 +4,12 @@
     align-items: center;
     justify-content: center;
 }
-.submit-button-wapper{
-    position: ;
+.submit-button-wrapper{
+    padding-left: 33rem;
 }
 
 .back-button-wrapper{
-
+    padding-left: 2.3rem;
 }
 
 .buttons-wrapper{
