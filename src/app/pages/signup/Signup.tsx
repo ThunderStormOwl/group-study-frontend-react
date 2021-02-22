@@ -4,6 +4,9 @@ import { Input } from'../../shared/components/Input';
 import './Signup.css';
 import { DarkModeCheckbox } from '../../shared/components/DarkModeCheckbox';
 import { Button } from '../../shared/components/Button';
+import Maria from '../../shared/assets/images/Maria.jpg';
+import Eclipse from '../../shared/assets/images/eclipse.jpg';
+import {useTheme} from '../../shared/hooks/useTheme'
 
 const formDataTemplate = {
     name:"",
@@ -15,6 +18,8 @@ const formDataTemplate = {
 }
 
 export const Signup: React.FC = () => {
+
+    const {isDark} = useTheme();
 
     const [formData, updateFormData] = React.useState(formDataTemplate);
 
@@ -39,7 +44,12 @@ export const Signup: React.FC = () => {
     };
 
     return(
-        <div className="page-wrapper">
+        <div 
+            className="page-wrapper" 
+            style={{backgroundImage: isDark?`url(${Eclipse})`:`url(${Maria})`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover'}}
+        >
             <Form >
                 
                 <div>
@@ -113,7 +123,7 @@ export const Signup: React.FC = () => {
 
             </Form>
             
-            <DarkModeCheckbox/>
+            <DarkModeCheckbox style={{color: 'white'}}/>
 
         </div>
     );
