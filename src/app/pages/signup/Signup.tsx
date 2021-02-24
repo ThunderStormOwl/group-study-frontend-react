@@ -102,7 +102,7 @@ export const Signup: React.FC = () => {
                 
                 <div className="buttons-wrapper padding-top-g padding-bottom-s">
                     
-                    <div className="back-button-wrapper">
+                    <div>
                         <Route render={({history}) => (
                             <Button 
                             className="form-button"
@@ -114,7 +114,7 @@ export const Signup: React.FC = () => {
                         )}/>
                     </div>
 
-                    <div className="submit-button-wrapper">
+                    <div>
                         <Button 
                             className="form-button test"
                             type="submit"

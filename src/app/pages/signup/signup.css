@@ -4,15 +4,9 @@
     align-items: center;
     justify-content: center;
 }
-.submit-button-wrapper{
-    padding-left: 33rem;
-}
-
-.back-button-wrapper{
-    padding-left: 2.3rem;
-}
 
 .buttons-wrapper{
-    width: 100%;
+    width: 93%;
+    justify-content: space-between;
 }
 
