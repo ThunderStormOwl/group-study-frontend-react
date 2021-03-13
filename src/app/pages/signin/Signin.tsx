@@ -12,11 +12,13 @@ export const Signin: React.FC = () => {
     const[email, setEmail] = useState('');
     const[password, setPassword] = useState('');
     const[keepConnected, setKeepConnected] = useState(false);
-
+    const[isLoading, setIsloading] = useState(false);
 
     const handleSubmit = useCallback(async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        setIsloading(true);
         const result =  await SigninService.signIn(email, password);
+        setIsloading(false);
 
         if(result.sucess){
             history.push('/dashboard');
@@ -41,7 +43,8 @@ export const Signin: React.FC = () => {
                         onSubmit={handleSubmit}
                     >
 
-                            <input 
+                            <input
+                                disabled={isLoading}
                                 className="padding-m font-size-m" 
                                 placeholder="Email"
                                 type="email"
@@ -52,6 +55,7 @@ export const Signin: React.FC = () => {
                         
                             <input
                                 minLength={2}
+                                disabled={isLoading}
                                 className="padding-m font-size-m margin-top-s" 
                                 placeholder="Password"
                                 type="password"
@@ -62,6 +66,7 @@ export const Signin: React.FC = () => {
 
                             <label className="font-size-m margin-top-s padding-top-s padding-bottom-m display-flex flex-items-center">
                                 <input
+                                    disabled={isLoading}
                                     className="margin-right-s"
                                     type="checkbox"
                                     checked={keepConnected}
@@ -71,13 +76,17 @@ export const Signin: React.FC = () => {
                             </label>
                             
 
-                            <Button>Log In</Button>
+                            <Button disabled={isLoading}>Log In</Button>
                     </form>
                     
                 </div>
+                {isLoading? 
+                <p className="font-size-m margin-top-m font-weight-g">
+                Sign Up
+                </p> : 
                 <Link to="/signup" className="font-size-m margin-top-m font-weight-g">
-                    Sign Up
-                </Link>
+                Sign Up
+                </Link>}
             </div>
 
             <DarkModeCheckbox/>

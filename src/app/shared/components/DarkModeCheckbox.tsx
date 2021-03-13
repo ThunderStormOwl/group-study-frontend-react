@@ -3,12 +3,12 @@ import {useTheme} from '../../shared/hooks/useTheme';
 import './styles/DarkModeCheckbox.css';
 
 
-interface DMCProps{
+interface IDarkModeCheckBoxProps{
     style?:{};
 }
 
 
-export const DarkModeCheckbox: React.FC<DMCProps> = ((props: DMCProps) => {
+export const DarkModeCheckbox: React.FC<IDarkModeCheckBoxProps> = ((props: IDarkModeCheckBoxProps) => {
 
     const {isDark, toggleDarkMode} = useTheme();
 
