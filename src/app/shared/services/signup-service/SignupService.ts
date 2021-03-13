@@ -1,3 +1,5 @@
+import { IRequestResult } from './../../interfaces/ICustomRequestErrors';
+import { AxiosError } from "axios";
 import { Api } from "../axios-config/AxiosConfig";
 
 interface UserSignup {
@@ -7,16 +9,41 @@ interface UserSignup {
     password: string
 }
 
-const signup = async (user : UserSignup) => {
+const signUp = async (user : UserSignup): Promise<IRequestResult> => {
     try{
         await Api.post('/SignUp', user);
-        return true;
+        return {sucess : true};
     }
     catch(error){
-        return false;
+        const err = error as AxiosError;
+        
+        const result : IRequestResult = {messages: [], sucess : false};
+        if(err.response?.data){
+
+            err.response.data.errors?.Password?.forEach((fieldError: string) => {
+                result.messages?.push(fieldError);
+            });
+            err.response.data.errors?.Email?.forEach((fieldError: string) => {
+                result.messages?.push(fieldError);
+            });
+            err.response.data.errors?.Name?.forEach((fieldError: string) => {
+                result.messages?.push(fieldError);
+            });
+            err.response.data.errors?.UserName?.forEach((fieldError: string) => {
+                result.messages?.push(fieldError);
+            });
+        }
+        else if(err.message === 'Network Error'){
+            if(result.messages){
+                result.messages.push("Make sure you are connected to the internet!")
+            }
+            return result;
+        }
+
+        return result;
     }
 }
 
-export const SignupServicec ={
-    signup
+export const SignupService ={
+    signUp
 };

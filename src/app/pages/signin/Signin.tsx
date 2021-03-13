@@ -1,19 +1,35 @@
 import React, { useCallback, useState } from 'react';
 import './Signin.css';
 import {Button} from '../../shared/components/Button';
-import {Link} from 'react-router-dom';
-import{DarkModeCheckbox} from '../../shared/components/DarkModeCheckbox'
+import {Link, useHistory} from 'react-router-dom';
+import{DarkModeCheckbox} from '../../shared/components/DarkModeCheckbox';
+import {SigninService} from '../../shared/services/signin-service/SigninService';
 
 export const Signin: React.FC = () => {
+
+    const history = useHistory();
 
     const[email, setEmail] = useState('');
     const[password, setPassword] = useState('');
     const[keepConnected, setKeepConnected] = useState(false);
 
 
-    const handleSubmit = useCallback((event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = useCallback(async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-    }, [email, password]);
+        const result =  await SigninService.signIn(email, password);
+
+        if(result.sucess){
+            history.push('/dashboard');
+        }
+        else{
+            if(!result.messages || result.messages.length === 0){
+                alert('Log in error!');
+            }
+            else{
+                alert(result.messages.join(',/n'));
+            }
+        }
+    }, [email, password, history]);
     
     return(
         <div className="signin-base flex-content-center flex-items-center">
