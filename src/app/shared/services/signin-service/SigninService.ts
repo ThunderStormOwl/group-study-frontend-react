@@ -4,12 +4,7 @@ import { Api } from "../axios-config/AxiosConfig";
 
 const signIn = async (email : string, password : string): Promise<IRequestResult> => {
     try{
-        await Api.post('/sign-in', undefined, {
-            headers: {
-                email,
-                password
-            }
-        });
+        await Api.post('/sign-in', {email, password});
         return {sucess : true};
     }
     catch(error){
