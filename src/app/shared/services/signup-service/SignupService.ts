@@ -11,7 +11,7 @@ interface UserSignup {
 
 const signUp = async (user : UserSignup): Promise<IRequestResult> => {
     try{
-        await Api.post('/SignUp', user);
+        await Api.post('/sign-up', user);
         return {sucess : true};
     }
     catch(error){
