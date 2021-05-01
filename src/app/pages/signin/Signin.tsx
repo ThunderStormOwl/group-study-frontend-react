@@ -36,7 +36,7 @@ export const Signin: React.FC = () => {
     return(
         <div className="signin-base flex-content-center flex-items-center">
             <div className="padding-g shadow-m border-red border-radius-soft flex-column flex-items-center background-paper">
-                <h2>Log in</h2>
+                <h2 className="font-size-xxg font-weight-m">Log in</h2>
                 <div className="margin-top-m">
                     <form 
                         className="flex-column login-form"
